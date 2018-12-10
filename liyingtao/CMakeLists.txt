@@ -3,5 +3,5 @@ project(OpenGL)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(OpenGL main.cpp point.cpp point.h surface.cpp surface.h model.cpp model.h vector.cpp vector.h)
-target_link_libraries(OpenGL glew32 opengl32 glu32 freeglut)
+add_executable(OpenGL main.cpp model.cpp model.h point.cpp point.h surface.cpp surface.h vector.cpp vector.h camera.cpp camera.h)
+target_link_libraries(OpenGL GL GLU glut)

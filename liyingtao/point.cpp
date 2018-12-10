@@ -5,34 +5,34 @@
 #include "point.h"
 #include "vector.h"
 
-Point::Point(double x, double y, double z) : x(x), y(y), z(z) {}
+Point::Point(long double x, long double y, long double z) : x(x), y(y), z(z) {}
 
-double Point::getX() const
+long double Point::getX() const
 {
 	return x;
 }
 
-void Point::setX(double x)
+void Point::setX(long double x)
 {
 	Point::x = x;
 }
 
-double Point::getY() const
+long double Point::getY() const
 {
 	return y;
 }
 
-void Point::setY(double y)
+void Point::setY(long double y)
 {
 	Point::y = y;
 }
 
-double Point::getZ() const
+long double Point::getZ() const
 {
 	return z;
 }
 
-void Point::setZ(double z)
+void Point::setZ(long double z)
 {
 	Point::z = z;
 }
@@ -44,7 +44,7 @@ void Point::setPoint(long double x, long double y, long double z)
 	Point::z = z;
 }
 
-void Point::movePoint(double x, double y, double z)
+void Point::movePoint(long double x, long double y, long double z)
 {
 	Point::x += x;
 	Point::y += y;
