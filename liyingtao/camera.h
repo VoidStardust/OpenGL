@@ -14,7 +14,7 @@ class Camera
 private:
 	Point eye = {3, 0, 1};
 	Point center = {0, 0, 0};
-	Point up {0, 0, 1};
+	Point up = {0, 0, 1};
 	bool upLock = false;
 
 public:

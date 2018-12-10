@@ -43,10 +43,13 @@ void Camera::translate(double x_dif, double y_dif, double z_dif)
 {
 	Vector perspective(eye, center);
 	Vector up_vector(Point(0, 0, 0), up);
-	long double a = Vector::scalarProduct(perspective, up_vector) / Vector::scalarProduct(up_vector, up_vector);
-	Vector move_y = perspective - (a * up_vector);
 
-//	Vector move = c * x_dif + e * y_dif;
+	long double a = Vector::scalarProduct(perspective, up_vector) / Vector::scalarProduct(up_vector, up_vector);
+	Vector move_x = Vector::unitVector(Vector::vectorProduct(perspective, up_vector));
+	Vector move_y = Vector::unitVector(perspective - (a * up_vector));
+	Vector move_z = Vector::unitVector(up_vector);
+
+	Vector move = move_x * x_dif + move_y * y_dif + move_z * z_dif;
 
 	eye.movePoint(move);
 	center.movePoint(move);

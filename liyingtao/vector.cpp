@@ -19,7 +19,6 @@ Vector Vector::vectorProduct(const Vector &left, const Vector &right)
 	return {left.y * right.z - left.z * right.y,
 		    left.z * right.x - left.x * right.z,
 		    left.x * right.y - left.y * right.x};
-//		    0};
 }
 
 long double Vector::scalarProduct(const Vector &left, const Vector &right)
